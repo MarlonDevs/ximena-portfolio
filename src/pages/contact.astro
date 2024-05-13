@@ -1,0 +1,68 @@
+---
+import Buttom from "../components/Buttom.astro";
+import Form from "../components/Form.astro";
+import Paragraphs from "../components/Paragraphs.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+import Send from "../icons/Send.astro";
+import TikTok from "../icons/TikTok.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contactame - Consultora Arte & Coaching">
+  <main class="flex justify-center items-center h-screen w-[80vw]">
+    <section class="flex justify-between items-center w-full">
+      <!--Saludo y presentacion -->
+      <article class="max-w-[25rem] text-[var(--clr-four)]">
+        <header>
+          <h1 class="text-2xl font-bold">
+            Desbloquea tu potencial. Tu viaje de transformacion comienza aqui.
+          </h1>
+        </header>
+        <main class="mt-8 text-pretty text-sm">
+          <Paragraphs>
+            ¿Estas listo para llevar tu vida al siguiente nivel? Contacta a tu coach de crecimiento personal. Para guiarte en el camino hacia el logro de tus metas y el desarrollo de tu maximo potencial.
+          </Paragraphs>
+          <Paragraphs>
+            Juntos crearemos un plan personalizado para superar tus desafios, desbloquear tu potencial y alcanzar el exito en todos los aspectos de tu vida.
+          </Paragraphs>
+          <Paragraphs>
+            No importa donde te encuentres ahora, estoy aqui para brindarte las herramientas y el enfoque que necesitas para alcanar tus sueños.
+          </Paragraphs>          
+        </main>
+        <footer class="flex flex-col justify-start items-start mt-4">
+          <div class="flex flex-col gap-2">
+            <h2 class="text-md font-bold ">Redes Sociales</h2>
+            <section class="flex gap-2 items-center">
+              <Mail class="size-5"/>
+              <span>contacto@ximenatroncoso.com</span>
+            </section>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h2 class="text-md font-bold ">Redes Sociales</h2>
+            <section class="flex gap-4 items-center">
+              <SocialPill href="http://www.linkedin.com/in/ximena-troncoso-garcia-25307021">
+                <LinkedIn class="size-5 text-[var(--clr-one)] opacity-85 hover:opacity-65 hover:scale-90"/>
+              </SocialPill>
+              <SocialPill href="http://www.instagram.com/coach_ximena_troncoso">
+                <Instagram class="size-5 text-[var(--clr-one)] opacity-85 hover:opacity-65 hover:scale-90"/>
+              </SocialPill>
+              <SocialPill href="https://www.facebook.com/ximena.e.garcia.9">
+                <Facebook class="size-5 text-[var(--clr-one)] opacity-85 hover:opacity-65 hover:scale-90"/>
+              </SocialPill>
+              <SocialPill href="https://tiktok.com/@ximenatroncosog">
+                <TikTok class="size-5 text-[var(--clr-one)] opacity-85 hover:opacity-65 hover:scale-90"/>
+              </SocialPill>
+            </section>
+          </div>
+        </footer>
+      </article>
+
+      <!--Form -->
+      <Form/>
+    </section>
+  </main>
+</Layout>

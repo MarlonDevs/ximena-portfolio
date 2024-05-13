@@ -1,0 +1,276 @@
+---
+import Buttom from "../components/Buttom.astro";
+import Paragraphs from "../components/Paragraphs.astro";
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Send from "../icons/Send.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sobre mi - Consultora Arte & Coaching">
+  <main class="flex justify-center flex-col h-full w-[80vw] mt-12">
+    <section class="flex justify-between items-center w-full">
+      <!--Saludo y presentacion -->
+      <article class="max-w-[35rem] text-[var(--clr-four)]">
+        <header>
+          <h1 class="capitalize text-4xl font-bold text-[var(--clr-four)]">
+            ¿Quien soy?
+          </h1>
+        </header>
+        <main class="mt-4 text-pretty text-sm">
+          <Paragraphs
+            >Soy una apasionada por el desarrollo personal y organizacional,
+            utilizando el poder transformador del arte para ayudar a las
+            personas y empresas a alcanzar su máximo potencial.</Paragraphs
+          >
+
+          <Paragraphs
+            >Mi proposito siempre es el contribuir al logro de los objetivos de
+            las organizaciones y personas, ademas de desarrollar la creatividad
+            para aumentar la productividad y generar ambientes de trabajo
+            saludables.</Paragraphs
+          >
+
+          <Paragraphs
+            >Mi unica mision es cultivar la creatividad como una herramienta
+            fundamental para aumentar la productividad, fomentar ambientes de
+            trabajo saludables. inspirar el crecimiento profesional y personal.
+            impulsar el desarrollo de habilidades innovadoras y maximizar el
+            potencial de las personas.</Paragraphs
+          >
+        </main>
+      </article>
+
+      <!--Photo del usuario -->
+      <div>
+        <figure class="w-[20rem]">
+          <img src="../../public/assets/user.avif" alt="img" />
+        </figure>
+
+        <!--<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
+				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
+				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
+				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div> -->
+      </div>
+    </section>
+
+    <!--Ofreciendo sus servicios -->
+    <section class="flex flex-col mt-32">
+      <article class="mt-8 mb-8 float-left">
+        <header>
+          <h1 class="text-2xl font-bold text-[var(--clr-four)]">
+            ¿Buscas una amplia gama de servicios de coaching?
+          </h1>
+        </header>
+        <main>
+          <ul class="max-w-md space-y-1 list-inside mt-4">
+            <li class="flex items-center">
+              <svg
+                class="w-3.5 h-3.5 me-2 text-[var(--clr-two)] flex-shrink-0 ml-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                ></path>
+              </svg>
+              <span class="capitalize text-[var(--clr-four)]"
+                >Coaching Individual y grupal para empresas.</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-3.5 h-3.5 me-2 text-[var(--clr-two)] flex-shrink-0 ml-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                ></path>
+              </svg>
+              <span class="capitalize text-[var(--clr-four)]"
+                >Talleres de creatividad e innovacion.</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-3.5 h-3.5 me-2 text-[var(--clr-two)] flex-shrink-0 ml-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                ></path>
+              </svg>
+              <span class="capitalize text-[var(--clr-four)]"
+                >Programas de bienestar emocional</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-3.5 h-3.5 me-2 text-[var(--clr-two)] flex-shrink-0 ml-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                ></path>
+              </svg>
+              <span class="capitalize text-[var(--clr-four)]"
+                >Asesoria para el desarrollo de lideres creativos.</span
+              >
+            </li>
+          </ul>
+        </main>
+      </article>
+    </section>
+
+    <!--Galeria y mas informacion -->
+    <section
+      class="my-[120px] grid grid-cols-2 justify-center items-center gap-12 w-full"
+    >
+      <article class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <section class="grid gap-2">
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/libro3.avif"
+              alt="Publicacion de mi tercer libro"
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/Mentoria_9_sobre_liderazgo_femenino.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img27.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+        <div class="grid gap-2">
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img28.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/libro4.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img26.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="grid gap-2">
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img9.avif"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img6.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img11.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="grid gap-2">
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/img4.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/Mentoria_6_importancia_de_ser_enseñables.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="../../public/assets/Participante_campeonato_internacional_de_oratoria_mujeres.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </article>
+
+      <article class="grid gap-2 w-[500px]">
+        <Paragraphs>
+          Con un enfoque personalizado y orientado a resultados, he ayudado a
+          muchas personas y empresas a lograr sus objetivos.
+        </Paragraphs>
+
+        <Paragraphs
+          >Si estas buscando una forma innovadora y efectiva de aumentar tu
+          potencial o el de tu organizacion, ¿Que esperas entonces?... contacta
+          a la unica Coach que necesitaras en tu vida.</Paragraphs
+        >
+
+        <Paragraphs
+          >Ademas de mi trabajo como Coach, soy una apacionada escritora. Donde
+          a lo largo de mi vida he publicado varios libros y articulos, donde
+          hablo sobre el arte de transformar vidas.</Paragraphs
+        >
+
+        <div class="flex">
+          <Buttom href="/gallery">
+            Ver Galeria
+          </Buttom>
+        </div>
+      </article>
+    </section>
+
+    <section class="flex flex-col justify-center items-center gap-4 mb-32">
+      <h1 class="capitalize text-2xl font-bold text-[var(--clr-four)]">
+        ¿Te gustaria saber mas sobre como puedo ayudarte a alcarzar tu
+        objetivos?
+      </h1>
+      <article class="flex justify-center items-center gap-8 mt-8">
+        <img src="../../src/assets/mailbox.svg" alt="Enviar mail" class="w-36">
+        <Buttom>
+          Contactame
+          <Send class="size-4" />
+        </Buttom>
+      </article>
+    </section>
+  </main>
+</Layout>

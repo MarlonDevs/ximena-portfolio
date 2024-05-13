@@ -1,0 +1,62 @@
+---
+import Facebook from '../icons/Facebook.astro';
+import Instagram from '../icons/Instagram.astro';
+import LinkedIn from '../icons/LinkedIn.astro';
+import Layout from '../layouts/Layout.astro';
+import Paragraphs from '../components/Paragraphs.astro'
+import Buttom from '../components/Buttom.astro';
+import SocialPill from '../components/SocialPill.astro';
+import TikTok from '../icons/TikTok.astro';
+import Send from '../icons/Send.astro';
+---
+
+<Layout title="Consultora Arte & Coaching">
+	<main class="flex justify-center items-center h-screen w-[80vw] m-0-auto">
+		<section class="flex justify-between items-center w-full">
+			<!--Saludo y presentacion -->
+			<article class="max-w-[25rem] text-[var(--clr-four)]">
+				<header>
+					<h1 class="capitalize text-3xl font-bold">hola! soy ximena troncoso</h1>
+					<hr class="bg-[var(--clr-four)] h-1 mt-[-3px]">
+					<h3 class="capitalize font-medium">escritoria y consultora de coaching</h3>
+				</header>
+				<main class="mt-4 text-pretty text-sm">
+					<Paragraphs>Uniendo la pasion por ayudar a otros con la creatividad a traves del arte para fomentar el bienestar emocional.</Paragraphs>
+				</main> 
+				<footer class="flex justify-between items-center mt-4">
+					<Buttom href="mailto:marlonmogollon13@gmail.com">
+						Contactame 
+						<Send class="size-4"/> 
+					</Buttom>
+
+					<section class="flex gap-4 ">
+						<SocialPill href="http://www.linkedin.com/in/ximena-troncoso-garcia-25307021">
+							<LinkedIn class="size-5 text-[var(--clr-one)] opacity-85"/>
+						</SocialPill>
+						<SocialPill href="http://www.instagram.com/coach_ximena_troncoso">
+							<Instagram class="size-5 text-[var(--clr-one)] opacity-85"/>
+						</SocialPill>
+						<SocialPill href="https://www.facebook.com/ximena.e.garcia.9">
+							<Facebook class="size-5 text-[var(--clr-one)] opacity-85"/>
+						</SocialPill>
+						<SocialPill href="https://tiktok.com/@ximenatroncosog">
+							<TikTok class="size-5 text-[var(--clr-one)] opacity-85"/>
+						</SocialPill>
+					</section>
+				</footer>
+			</article>
+
+			<!--Photo del usuario -->
+			<div class="overflow-hidden">
+				<figure class="w-[20rem]">
+					<img src="../../public/assets/user.avif" alt="img"/>
+				</figure>
+
+				<!--<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
+				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
+				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
+				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div> -->
+			</div>
+		</section>
+	</main>
+</Layout>

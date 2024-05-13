@@ -1,0 +1,44 @@
+---
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/",
+  },
+  {
+    title: "Servicios",
+    label: "servicios",
+    url: "/services",
+  },
+  {
+    title: "Sobre mi",
+    label: "sobre-mi",
+    url: "/about",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "/contact",
+  },
+]
+---
+
+<header class="top-0 flex items-center justify-center w-full mt-2 sm:mx-4">
+    <div class="flex justify-between items-center w-full ">
+        <span>Logo</span>
+
+        <nav class="flex text-sm font-medium rounded-full justify-center items-center">
+            {
+                navItems.map((link) => (
+                    <a 
+                    class="relative block mx-2 my-2 transition"
+                    aria-label={link.label}
+                    href={link.url}
+                    >
+                        {link.title}
+                    </a>
+                ))
+            }
+        </nav>
+    </div>
+</header>
