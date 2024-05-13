@@ -1,0 +1,37 @@
+---
+const info = [
+  {
+    title: "Propósito",
+    description:
+      "Es contribuir a potenciar el logro de los objetivos de las organizaciones y personas, desarrollando la creatividad para aumentar la productividad y generar ambientes de trabajo saludables.",
+  },
+  {
+    title: "Misión",
+
+    description:
+      "Mi misión es cultivar la creatividad y el bienestar emocional como una herramienta fundamental para aumentar la productividad y fomentar ambientes de trabajo mas solidos y saludables.",
+  },
+  {
+    title: "Propuesta de valor",
+    description:
+      "Mi propuesta de valor radica en la combinación de mis conocimientos en prevención de riesgos con las técnicas y metodologías del coaching, sumado al uso de herramientas como artista plástica.",
+  },
+];
+---
+
+<section class="grid grid-cols-3 justify-center items-center my-12 gap-4">
+{
+  info.map((item) => (
+    <article class="h-full group flex flex-col relative overflow-hidden gap-1 max-w-md p-6 bg-[var(--clr-two)] rounded-lg shadow">
+      <a href="#">
+        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[var(--clr-one)] capitalize">
+          {item.title}
+        </h5>
+      </a>
+      <p class="font-normal text-[var(--clr-four)] text-sm">{item.description} </p>
+    </article>
+  ))
+}
+
+  <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine"></div>
+</section>

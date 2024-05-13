@@ -1,0 +1,276 @@
+---
+import Buttom from "./Buttom.astro";
+
+const cardItem = [
+  {
+    title: "Sesiones de coaching 1 a 1",
+    description:
+      "Orientado cumplir objetivos reconociendo limitantes y descubriendo el poder de transformación de los pensamientos.",
+    price: "49",
+  },
+  {
+    title: "Programa mentoring de 10 sesiones.",
+    description: "'Mente rica e inversión exitosa', cómo desarrollar la mentalidad para invertir y generar ingresos adicionales.",
+    price: "89",
+    /*list: [
+        {
+            itemOne: "ajsjas",
+            itemTwo: "hola",
+            itemThree: "hola",
+            itemFour: "hola",
+        }
+    ],*/
+  },
+  {
+    title: "Curso grabado, acceso de por vida",
+    description: "'Mujer triunfadora', cómo potenciar habilidades y valores para lograr cambiar hábitos.",
+    price: "200",
+    /*list: [
+        {
+            itemOne: "hola",
+            itemTwo: "hola",
+            itemThree: "hola",
+            itemFour: "hola",
+        }
+    ],*/
+  },
+];
+
+const list = [
+  {
+    itemOne: "Trabajo en equipo",
+    itemTwo: "liderazgo",
+    itemThree: "Gestión eficaz del tiempo",
+    itemFour: "Comunicación efectiva y asertiva",
+    itemFive: "Atencion al cliente",
+    itemSix: "clima laboral",
+  },/*
+  {
+    itemOne: "Creatividad sostenible: Motivación y productividad en un entorno de bienestar emocional.",
+    itemTwo: "Mente creativa, ambiente productivo: herramientas para un equilibrio emocional en el trabajo.",
+    itemThree: "Transforma tu entorno eleva tu productividad: creatividad y bienestar en un ambiente laboral",
+    itemFour: "Comunicación efectiva y asertiva",
+    itemFive: "Atencion al cliente",
+    itemSix: "clima laboral",
+  },
+  {
+    itemOne: "Trabajo en equipo",
+    itemTwo: "liderazgo",
+    itemThree: "comunicacion asertiva",
+    itemFour: "atencion al cliente",
+    itemFive: "gestion eficaz de tiempo",
+    itemSix: "clima laboral",
+  },*/
+];
+---
+
+<article class="flex items-center justify-center gap-4 m-auto">
+  {
+    cardItem.map((link) => (
+      <div class="w-full max-w-sm p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 capitalize">
+          {link.title}
+        </h5>
+        <h3 class="mb-4 text-md font-light text-gray-400">
+          {link.description}
+        </h3>
+        <!-- <div class="flex items-baseline text-gray-900">
+          <span class="text-3xl font-semibold">$</span>
+          <span class="text-5xl font-extrabold tracking-tight">
+            {link.price}
+          </span>
+          <span class="ms-1 text-xl font-normal text-gray-500">/month</span>
+        </div> -->
+        <hr class="mt-2 mb-12 border-2 border-gray-500 rounded" />
+        <ul role="list" class="space-y-5 my-7">
+          {list.map((items) => (
+            <li class="flex items-center">
+              <svg
+                class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+                {items.itemOne}
+              </span>
+            </li>
+            <li class="flex">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+                {items.itemTwo}
+            </span>
+          </li>
+          <li class="flex">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+                {items.itemThree}
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+                {items.itemFour}
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+                {items.itemFive}
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+                {items.itemSix}
+            </span>
+          </li>
+          ))}
+        </ul>
+        <Buttom>Adquirir</Buttom>
+      </div>
+    ))
+  }
+</article>
+
+<!--<li class="flex items-center">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+              2 team members
+            </span>
+          </li>
+          <li class="flex">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+              20GB Cloud storage
+            </span>
+          </li>
+          <li class="flex">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+              Integration help
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+              Sketch Files
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+              API Access
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+              Complete documentation
+            </span>
+          </li>
+          <li class="flex line-through decoration-gray-500">
+            <svg
+              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
+              24×7 phone & email support
+            </span>
+          </li> -->

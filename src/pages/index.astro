@@ -8,20 +8,21 @@ import Buttom from '../components/Buttom.astro';
 import SocialPill from '../components/SocialPill.astro';
 import TikTok from '../icons/TikTok.astro';
 import Send from '../icons/Send.astro';
+import CardInfo from '../components/CardInfo.astro';
 ---
 
 <Layout title="Consultora Arte & Coaching">
-	<main class="flex justify-center items-center h-screen w-[80vw] m-0-auto">
+	<main class="flex justify-center items-center h-full w-[80vw] m-0-auto flex-col">
 		<section class="flex justify-between items-center w-full">
 			<!--Saludo y presentacion -->
 			<article class="max-w-[25rem] text-[var(--clr-four)]">
 				<header>
-					<h1 class="capitalize text-3xl font-bold">hola! soy ximena troncoso</h1>
-					<hr class="bg-[var(--clr-four)] h-1 mt-[-3px]">
-					<h3 class="capitalize font-medium">escritoria y consultora de coaching</h3>
+					<h1 class="capitalize text-4xl font-bold">hola! soy ximena </h1>
+					<hr class="bg-[var(--clr-four)] h-1 mt-[-1px]">
+					<h3 class="font-medium">Escritoria y Consultora de Coaching</h3>
 				</header>
 				<main class="mt-4 text-pretty text-sm">
-					<Paragraphs>Uniendo la pasion por ayudar a otros con la creatividad a traves del arte para fomentar el bienestar emocional.</Paragraphs>
+					<Paragraphs>Ximena Troncoso es la Coach del arte. Uniendo la pasión por ayudar a otras personas y conectar con la creatividad a través del arte para fomentar el bienestar emocional.</Paragraphs>
 				</main> 
 				<footer class="flex justify-between items-center mt-4">
 					<Buttom href="mailto:marlonmogollon13@gmail.com">
@@ -47,7 +48,7 @@ import Send from '../icons/Send.astro';
 			</article>
 
 			<!--Photo del usuario -->
-			<div class="overflow-hidden">
+			<div class="md:overflow-hidden">
 				<figure class="w-[20rem]">
 					<img src="../../public/assets/user.avif" alt="img"/>
 				</figure>
@@ -58,5 +59,8 @@ import Send from '../icons/Send.astro';
 				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div> -->
 			</div>
 		</section>
+
+		<!--Information the cards motivational -->
+		<CardInfo/>
 	</main>
 </Layout>

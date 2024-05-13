@@ -1,45 +1,33 @@
 ---
-import Facebook from '../icons/Facebook.astro';
-import Instagram from '../icons/Instagram.astro';
-import LinkedIn from '../icons/LinkedIn.astro';
-import Layout from '../layouts/Layout.astro';
+import CardServicesCompany from "../components/CardServicesCompany.astro";
+import CardServicesPersonal from "../components/CardServicesPersonal.astro";
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Servicios - Consultora Arte & Coaching">
-	<main class="flex justify-center items-center h-screen w-[80vw]">
-		<section class="flex justify-between items-center w-full">
-			<!--Saludo y presentacion -->
-			<article class="max-w-[25rem] text-[var(--clr-four)]">
-				<header>
-					<h1 class="capitalize text-3xl font-bold">hola! soy ximena troncoso</h1>
-					<hr class="bg-[var(--clr-four)] h-1 mt-[-3px]">
-					<h3 class="capitalize font-medium">escritoria y consultora de coaching</h3>
-				</header>
-				<main class="mt-8 text-pretty text-sm">
-					<p>Uniendo la pasion por ayudar a otros con la creatividad a traves del arte para fomentar el bienestar emocional.</p>
-				</main>
-				<footer class="flex justify-between items-center mt-4">
-					<a href="" class="bg-[var(--clr-one)] p-2 text-[var(--clr-three)] rounded-lg opacity-85">Contactame</a>
+  <main class="flex justify-center items-center flex-col h-full w-[80vw] my-12">
+    <div class="w-[46rem] text-center">
+      <h1 class="font-semibold text-pretty text-2xl mt-20 mb-12">
+        ¿Estas buscando desarrollar todo tu potencial y alcanzar tus metas tanto
+        en el ambito personal como profesional?
+      </h1>
+    </div>
 
-					<div class="flex gap-4 text-[var(--clr-one)] opacity-85">
-						<LinkedIn class="size-6"/>
-						<Instagram class="size-6"/>
-						<Facebook class="size-6"/>
-					</div>
-				</footer>
-			</article>
+    <h2 class="font-semibold text-pretty text-2xl mt-10 mb-12 text-center opacity-80">
+      Servicios para empresas y organizaciones
+    </h2>
+    <section class="flex justify-between items-center w-full gap-4">
+      <CardServicesCompany />
+    </section>
 
-			<!--Photo del usuario -->
-			<div>
-				<figure class="w-[20rem]">
-					<img src="../../src/assets/user.avif" alt="img"/>
-				</figure>
-
-				<!--<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
-				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
-				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
-				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div> -->
-			</div>
-		</section>
-	</main>
+    <h2 class="font-semibold text-pretty text-2xl mt-16 mb-5 text-center opacity-80">
+      Servicios para personas
+    </h2>
+    <section class="flex justify-between items-center w-full gap-4">
+      <CardServicesPersonal />
+    </section>
+  </main>
 </Layout>
