@@ -4,68 +4,9 @@ import Buttom from "./Buttom.astro";
 ---
 
 <div>
-  <form class="max-w-sm mx-auto">
-    <div class="mb-3">
-      <label
-        for="base-input"
-        class="block mb-2 text-sm font-medium text-[var(--clr-four)]"
-        >Nombre</label
-      >
-      <input
-        type="text"
-        id="base-input"
-        placeholder="Ej: Ximena Troncoso"
-        class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
-      />
-    </div>
-    <div class="mb-3">
-      <label
-        for="base-input"
-        class="block mb-2 text-sm font-medium text-[var(--clr-four)]"
-        >Email</label
-      >
-      <input
-        type="text"
-        id="base-input"
-        placeholder="Ej: example@mail.com"
-        class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
-      />
-    </div>
-    <!--Message -->
-    <div class="mb-3">
-      <label
-        for="message"
-        class="block mb-2 text-sm font-medium text-[var(--clr-four)]"
-        >Mensaje</label
-      >
-      <textarea
-        id="message"
-        rows="4"
-        placeholder="Quisiera Adquirir sus servicios de coaching..."
-        class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 resize-none h-44 outline-none"
-      ></textarea>
-    </div>
-    <!--Terms and conditions -->
-    <div class="flex items-start mb-3">
-      <div class="flex items-center h-5">
-        <input
-          id="terms"
-          type="checkbox"
-          value=""
-          class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
-          required
-        />
-      </div>
-      <label for="terms" class="ms-2 text-sm font-medium text-gray-500"
-        >I agree with the <a
-          href="#"
-          class="text-[var(--clr-two)] hover:underline">terms and conditions</a
-        ></label
-      >
-    </div>
-    <Buttom>
-      Contactame
-      <Send class="size-4" />
-    </Buttom>
-  </form>
+  
+  <script type="text/javascript" src="https://opnform.com/widgets/iframeResize.min.js"></script>
+  <iframe style="border:none;width:100%;" id="form-comunicate-con-nosotros-hpera2" src="https://opnform.com/forms/comunicate-con-nosotros-hpera2"></iframe>
+  <script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, "#form-comunicate-con-nosotros-hpera2");</script>
+
 </div>
