@@ -1,4 +1,5 @@
 ---
+import CardServices from "../components/CardServices.astro";
 import CardServicesCompany from "../components/CardServicesCompany.astro";
 import CardServicesPersonal from "../components/CardServicesPersonal.astro";
 import Facebook from "../icons/Facebook.astro";
@@ -8,18 +9,31 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Servicios - Consultora Arte & Coaching">
-  <main class="flex justify-center items-center flex-col h-full w-[80vw] my-12">
+  <main class="flex justify-center items-center flex-col h-full w-[80vw] my-12 mx-6">
     <div class="w-[46rem] text-center">
-      <h1 class="font-semibold text-pretty text-2xl mt-20 mb-12">
+      <h1 class="font-semibold text-pretty text-2xl mt-14 mb-6 opacity-85">
         ¿Estas buscando desarrollar todo tu potencial y alcanzar tus metas tanto
         en el ambito personal como profesional?
       </h1>
+      <h4 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-4xl p-6 mb-4">
+        <span class="block">
+          Aquiere alguno de
+            <span class="text-transparent bg-clip-text bg-gradient-to-tr to-[var(--clr-one)] from-[var(--clr-two)]">
+              nuestros servicios
+            </span>
+          descubre tu potencial
+        </span>
+      </h4>
     </div>
 
-    <h2 class="font-semibold text-pretty text-2xl mt-10 mb-12 text-center opacity-80">
+    <!--<h2 class="font-semibold text-pretty text-2xl mt-6 mb-12 text-center opacity-80 capitalize">
       Servicios para empresas y organizaciones
-    </h2>
+    </h2>-->
+
     <section class="flex justify-between items-center w-full gap-4">
+      <CardServices />
+    </section>
+    <!--<section class="flex justify-between items-center w-full gap-4">
       <CardServicesCompany />
     </section>
 
@@ -29,5 +43,5 @@ import Layout from "../layouts/Layout.astro";
     <section class="flex justify-between items-center w-full gap-4">
       <CardServicesPersonal />
     </section>
-  </main>
+  </main> -->
 </Layout>
