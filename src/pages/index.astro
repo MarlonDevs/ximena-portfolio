@@ -13,7 +13,7 @@ import CardInfo from '../components/CardInfo.astro';
 
 <Layout title="Consultora Arte & Coaching">
 	<main class="grid justify-center items-center h-full w-[80vw] m-auto">
-		<section class="flex justify-between items-center w-full mt-8">
+		<section class="grid md:gap-80 md:grid-cols-2 grid-cols-1 justify-between items-center w-full mt-8">
 			<!--Saludo y presentacion -->
 			<article class="md:max-w-[25rem] text-[var(--clr-four)] mt-28 mb-14">
 				<header>
@@ -47,17 +47,11 @@ import CardInfo from '../components/CardInfo.astro';
 				</footer>
 			</article>
 
-			<!--Photo del usuario 
-			<div class="md:overflow-visible overflow-hidden">
-				<figure class="w-[20rem]">
-					<img src="/assets/User.avif" alt="img"/>
-				</figure>-->
-
-				<!--<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
-				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
-				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
-				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div> -->
-			</div>
+			<!--Photo del usuario -->
+			
+			<figure class="flex md:w-[20rem] w-0 md:visible invisible overflow-hidden">
+				<img src="/assets/User.avif" alt="img"/>
+			</figure>
 		</section>
 
 		<!--Information the cards motivational -->

@@ -9,8 +9,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sobre mi - Consultora Arte & Coaching">
-  <main class="grid justify-center items-center h-full w-[80vw] my-12 mx-6 m-auto">
-    <section class="grid justify-between items-center w-full mt-20 md:grid-cols-2 grid-cols-1">
+  <main class="grid justify-center items-center h-full w-[80vw] my-6 mx-6 m-auto">
+    <section class="grid md:gap-80 justify-between items-center w-full mt-20 md:grid-cols-2 grid-cols-1">
       <!--Saludo y presentacion -->
       <article class="max-w-[35rem] text-[var(--clr-four)]">
         <header>
@@ -42,10 +42,10 @@ import Layout from "../layouts/Layout.astro";
         </main>
       </article>
 
-      <!--Photo del usuario
-      <figure class="md:w-[20rem] overflow-hidden">
+      <!--Photo del usuario-->
+      <figure class="flex md:w-[20rem] w-0 md:visible invisible overflow-hidden">
         <img src="/assets/User.avif" alt="img" />
-      </figure> -->
+      </figure> 
 
         <!--<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
 				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
@@ -54,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!--Ofreciendo sus servicios -->
-    <section class="flex flex-col mt-32">
+    <section class="flex flex-col mt-24">
       <article class="mt-8 mb-8 float-left">
         <header>
           <h1 class="text-2xl font-bold text-[var(--clr-four)]">
