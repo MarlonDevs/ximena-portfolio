@@ -13,8 +13,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contactame - Consultora Arte & Coaching">
-  <main class="flex justify-center items-center h-screen w-[80vw]">
-    <section class="flex justify-between items-center w-full">
+  <main class="grid justify-center items-center h-full w-[80vw] my-12 mx-6 m-auto">
+    <section class="grid md:grid-cols-2 justify-between gap-28 w-full">
       <!--Saludo y presentacion -->
       <article class="max-w-[25rem] text-[var(--clr-four)]">
         <header>
@@ -36,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
         <footer class="flex flex-col justify-start items-start mt-4">
           <div class="flex flex-col gap-2">
             <h2 class="text-md font-bold ">Redes Sociales</h2>
-            <section class="flex gap-2 items-center">
+            <section class="flex gap-2 items-center mb-4">
               <Mail class="size-5"/>
               <span>contacto@ximenatroncoso.com</span>
             </section>
