@@ -9,8 +9,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sobre mi - Consultora Arte & Coaching">
-  <main class="flex justify-center flex-col h-full w-[80vw] mt-12">
-    <section class="flex justify-between items-center w-full">
+  <main class="grid justify-center items-center h-full w-[80vw] my-12 mx-6 m-auto">
+    <section class="grid justify-between items-center w-full mt-20 md:grid-cols-2 grid-cols-1">
       <!--Saludo y presentacion -->
       <article class="max-w-[35rem] text-[var(--clr-four)]">
         <header>
@@ -42,17 +42,15 @@ import Layout from "../layouts/Layout.astro";
         </main>
       </article>
 
-      <!--Photo del usuario -->
-      <div>
-        <figure class="w-[20rem]">
-          <img src="/assets/User.avif" alt="img" />
-        </figure>
+      <!--Photo del usuario
+      <figure class="md:w-[20rem] overflow-hidden">
+        <img src="/assets/User.avif" alt="img" />
+      </figure> -->
 
         <!--<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
 				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
 				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div>
 				<div class="w-[20rem] h-4 bg-[var(--clr-one)] mb-1 rounded-xl"></div> -->
-      </div>
     </section>
 
     <!--Ofreciendo sus servicios -->
@@ -136,7 +134,7 @@ import Layout from "../layouts/Layout.astro";
 
     <!--Galeria y mas informacion -->
     <section
-      class="my-[120px] grid grid-cols-2 justify-center items-center gap-12 w-full"
+      class="my-[120px] grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-12 w-full"
     >
       <article class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <section class="grid gap-2">
@@ -234,7 +232,7 @@ import Layout from "../layouts/Layout.astro";
       </article>
 
       <!-- Information -->
-      <article class="grid gap-2 w-[500px]">
+      <article class="grid gap-2 md:w-[500px] text-pretty">
         <Paragraphs>
           Con un enfoque personalizado y orientado a resultados, he ayudado a
           muchas personas y empresas a lograr sus objetivos.
@@ -261,7 +259,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- Contact for mail -->
-    <section class="flex flex-col justify-center items-center gap-4 mb-32">
+    <section class="grid justify-center items-center gap-4 mb-32">
       <h1 class="capitalize text-2xl font-bold text-[var(--clr-four)]">
         ¿Te gustaria saber mas sobre como puedo ayudarte a alcarzar tu
         objetivos?
