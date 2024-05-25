@@ -25,13 +25,13 @@ const navItems = [
 
 <header class="top-0 flex items-center justify-center w-full mt-2 sm:mx-4">
     <div class="flex justify-between items-center w-full ">
-        <span>Logo</span>
+        <img src="/logo.png" alt="Logo Consultora y Arte Coaching" width="140">
 
-        <nav class="flex text-sm font-medium rounded-full justify-center items-center">
+        <nav class="flex text-[12px] md:text-sm font-medium rounded-full justify-center items-center">
             {
                 navItems.map((link) => (
                     <a 
-                    class="relative block mx-2 my-2 transition"
+                    class="relative block mx-1 md:mx-2 my-2 transition"
                     aria-label={link.label}
                     href={link.url}
                     >
