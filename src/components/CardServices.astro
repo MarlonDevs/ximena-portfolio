@@ -7,25 +7,41 @@ const cardItem = [
     description:
       "Orientado cumplir objetivos reconociendo limitantes y descubriendo el poder de transformación de los pensamientos.",
     price: "49",
+    list: [
+        {
+            itemOne: "ho",
+            itemTwo: "ho",
+            itemThree: "ho",
+            itemFour: "ho",
+        }
+    ],
   },
   {
     title: "Sesiones grupales de Coaching",
     description:
       "Segun análisis y diagnóstico, adaptado a la necesidad y requerimiento de cada organización.",
     price: "49",
+    list: [
+        {
+            itemOne: "pan",
+            itemTwo: "pan",
+            itemThree: "pan",
+            itemFour: "pan",
+        }
+    ],
   },
   {
-    title: "Coaching personalizado",
-    description: "El coaching personalizado te ayudará a superar tus desafíos, desarrollar tus habilidades y alcanzar tu máximo potencial",
+    title: "Talleres de arte, creatividad e innovación",
+    description: "De una forma mas personalizada, te ayudare a superar tus desafíos, desarrollar tus habilidades y alcanzar tu máximo potencial",
     price: "200",
-    /*list: [
+    list: [
         {
-            itemOne: "hola",
-            itemTwo: "hola",
-            itemThree: "hola",
+            itemOne: "Creatividad sostenible: Motivación y productividad en un entorno de bienestar emocional.",
+            itemTwo: "Mente creativa, ambiente productivo: herramientas para un equilibrio emocional en el trabajo.",
+            itemThree: "Transforma tu entorno eleva tu productividad: creatividad y bienestar en un ambiente laboral",
             itemFour: "hola",
         }
-    ],*/
+    ],
   },
 ];
 
@@ -37,14 +53,6 @@ const list = [
     itemFour: "Comunicación efectiva y asertiva",
     itemFive: "Atencion al cliente",
     itemSix: "clima laboral",
-  },/*
-  {
-    itemOne: "Creatividad sostenible: Motivación y productividad en un entorno de bienestar emocional.",
-    itemTwo: "Mente creativa, ambiente productivo: herramientas para un equilibrio emocional en el trabajo.",
-    itemThree: "Transforma tu entorno eleva tu productividad: creatividad y bienestar en un ambiente laboral",
-    itemFour: "Comunicación efectiva y asertiva",
-    itemFive: "Atencion al cliente",
-    itemSix: "clima laboral",
   },
   {
     itemOne: "Trabajo en equipo",
@@ -53,7 +61,12 @@ const list = [
     itemFour: "atencion al cliente",
     itemFive: "gestion eficaz de tiempo",
     itemSix: "clima laboral",
-  },*/
+  },
+  {
+    itemOne: "Creatividad sostenible: Motivación y productividad en un entorno de bienestar emocional.",
+    itemTwo: "Mente creativa, ambiente productivo: herramientas para un equilibrio emocional en el trabajo.",
+    itemThree: "Transforma tu entorno eleva tu productividad: creatividad y bienestar en un ambiente laboral",
+  },
 ];
 ---
 
@@ -64,7 +77,7 @@ const list = [
         <h5 class="mb-4 text-xl font-medium text-gray-500 capitalize">
           {link.title}
         </h5>
-        <h3 class="mb-4 text-md font-light text-gray-400">
+        <h3 class="mb-4 text-md font-light text-gray-400 text-pretty">
           {link.description}
         </h3>
         <!-- <div class="flex items-baseline text-gray-900">
