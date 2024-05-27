@@ -9,10 +9,12 @@ const cardItem = [
     price: "49",
     list: [
         {
-            itemOne: "ho",
-            itemTwo: "ho",
-            itemThree: "ho",
-            itemFour: "ho",
+          itemOne: "Trabajo en equipo",
+          itemTwo: "Liderazgo",
+          itemThree: "Comunicacion asertiva",
+          itemFour: "Atencion al cliente",
+          itemFive: "Gestion eficaz de tiempo",
+          itemSix: "Clima laboral",
         }
     ],
   },
@@ -23,10 +25,12 @@ const cardItem = [
     price: "49",
     list: [
         {
-            itemOne: "pan",
-            itemTwo: "pan",
-            itemThree: "pan",
-            itemFour: "pan",
+          itemOne: "Trabajo en equipo",
+          itemTwo: "Liderazgo",
+          itemThree: "Comunicacion asertiva",
+          itemFour: "Atencion al cliente",
+          itemFive: "Gestion eficaz de tiempo",
+          itemSix: "Clima laboral",
         }
     ],
   },
@@ -36,47 +40,26 @@ const cardItem = [
     price: "200",
     list: [
         {
-            itemOne: "Creatividad sostenible: Motivación y productividad en un entorno de bienestar emocional.",
-            itemTwo: "Mente creativa, ambiente productivo: herramientas para un equilibrio emocional en el trabajo.",
-            itemThree: "Transforma tu entorno eleva tu productividad: creatividad y bienestar en un ambiente laboral",
-            itemFour: "hola",
+          itemOne: "Creatividad sostenible",
+          itemTwo: "Mente creativa, ambiente productivo",
+          itemThree: "Transforma tu entorno eleva tu productividad",
+          itemFour: "Conferencias motivacionales",
+          itemFive: "Gestion eficaz de tiempo",
+          itemSix: "Clima laboral",
         }
     ],
   },
 ];
 
-const list = [
-  {
-    itemOne: "Trabajo en equipo",
-    itemTwo: "liderazgo",
-    itemThree: "Gestión eficaz del tiempo",
-    itemFour: "Comunicación efectiva y asertiva",
-    itemFive: "Atencion al cliente",
-    itemSix: "clima laboral",
-  },
-  {
-    itemOne: "Trabajo en equipo",
-    itemTwo: "liderazgo",
-    itemThree: "comunicacion asertiva",
-    itemFour: "atencion al cliente",
-    itemFive: "gestion eficaz de tiempo",
-    itemSix: "clima laboral",
-  },
-  {
-    itemOne: "Creatividad sostenible: Motivación y productividad en un entorno de bienestar emocional.",
-    itemTwo: "Mente creativa, ambiente productivo: herramientas para un equilibrio emocional en el trabajo.",
-    itemThree: "Transforma tu entorno eleva tu productividad: creatividad y bienestar en un ambiente laboral",
-  },
-];
 ---
 
-<article class="grid md:grid-cols-3 items-center justify-center gap-4 m-auto">
+<article class="grid md:grid-cols-3 items-start justify-center gap-4 m-auto">
   {
-    cardItem.map((link) => (
-      <div class="w-full max-w-sm p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8">
-        <h5 class="mb-4 text-xl font-medium text-gray-500 capitalize">
+    cardItem.map((link) =>  (
+      <div class="grid auto-rows-auto w-full max-w-sm p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8">
+        <h2 class="mb-4 text-xl font-medium text-gray-500 capitalize">
           {link.title}
-        </h5>
+        </h2>
         <h3 class="mb-4 text-md font-light text-gray-400 text-pretty">
           {link.description}
         </h3>
@@ -88,8 +71,8 @@ const list = [
           <span class="ms-1 text-xl font-normal text-gray-500">/month</span>
         </div> -->
         <hr class="mt-2 mb-12 border-2 border-gray-500 rounded" />
-        <ul role="list" class="space-y-5 my-7">
-          {list.map((items) => (
+        <ul role="list" class="space-y-5 mb-7 mt-3">
+          {link.list.map(({ itemOne, itemTwo, itemThree, itemFour, itemFive, itemSix}) => (
             <li class="flex items-center">
               <svg
                 class="flex-shrink-0 w-4 h-4 text-[var(--clr-two)]"
@@ -101,7 +84,7 @@ const list = [
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
               <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
-                {items.itemOne}
+                {itemOne}
               </span>
             </li>
             <li class="flex">
@@ -115,7 +98,7 @@ const list = [
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
             <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
-                {items.itemTwo}
+                {itemTwo}
             </span>
           </li>
           <li class="flex">
@@ -129,12 +112,12 @@ const list = [
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
             <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
-                {items.itemThree}
+                {itemThree}
             </span>
           </li>
-          <li class="flex line-through decoration-gray-500">
+          <li class="flex">
             <svg
-              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              class="flex-shrink-0 w-4 h-4 text-[var(--clr-two)]"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -142,13 +125,13 @@ const list = [
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
-            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
-                {items.itemFour}
+            <span class="text-base font-normal leading-tight  text-gray-500 dark:text-gray-400 ms-3">
+                {itemFour}
             </span>
           </li>
-          <li class="flex line-through decoration-gray-500">
+          <li class="flex">
             <svg
-              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              class="flex-shrink-0 w-4 h-4 text-[var(--clr-two)]"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -156,13 +139,13 @@ const list = [
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
-            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
-                {items.itemFive}
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+                {itemFive}
             </span>
           </li>
-          <li class="flex line-through decoration-gray-500">
+          <li class="flex">
             <svg
-              class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500"
+              class="flex-shrink-0 w-4 h-4 text-[var(--clr-two)]"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -170,8 +153,8 @@ const list = [
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
-            <span class="text-base font-normal leading-tight text-gray-500 ms-3">
-                {items.itemSix}
+            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+                {itemSix}
             </span>
           </li>
           ))}
