@@ -3,49 +3,40 @@ import Buttom from "./Buttom.astro";
 
 const cardItem = [
   {
-    title: "Sesiones de coaching 1 a 1",
+    title: "Servicio de Coaching Personalizado.",
     description:
-      "Orientado cumplir objetivos reconociendo limitantes y descubriendo el poder de transformación de los pensamientos.",
-    price: "49",
+      "Orientado cumplir objetivos reconociendo limitantes, y descubriendo el poder de transformación de los pensamientos.",
+    price: "0",
     list: [
         {
-          itemOne: "Trabajo en equipo",
-          itemTwo: "Liderazgo",
-          itemThree: "Comunicacion asertiva",
-          itemFour: "Atencion al cliente",
-          itemFive: "Gestion eficaz de tiempo",
-          itemSix: "Clima laboral",
+          itemOne: "Programa mentoring 1 a 1 de 10 sesiones",
+          itemTwo: 'Curso online "Mujer triunfadora"',
+          itemThree: "Sesiones individuales de coaching",
         }
     ],
   },
   {
-    title: "Sesiones grupales de Coaching",
+    title: "Servicios de Coaching a empresas y organizaciones.",
     description:
       "Segun análisis y diagnóstico, adaptado a la necesidad y requerimiento de cada organización.",
-    price: "49",
+    price: "0",
     list: [
         {
-          itemOne: "Trabajo en equipo",
-          itemTwo: "Liderazgo",
-          itemThree: "Comunicacion asertiva",
-          itemFour: "Atencion al cliente",
-          itemFive: "Gestion eficaz de tiempo",
-          itemSix: "Clima laboral",
+          itemOne: "Sesiones grupales de coaching según diagnóstico previo",
+          itemTwo: "Talleres organizacionales: Trabajo en Equipo, Gestion Eficaz de Tiempo, Liderazgo, Comunicación efectiva y asertiva, Atención al cliente y Clima laboral.",
+          itemThree: "Charlas clima laboral, desarrollo personal",
         }
     ],
   },
   {
-    title: "Talleres de arte, creatividad e innovación",
+    title: "Talleres y conferencias arte, creatividad e innovación.",
     description: "De una forma mas personalizada, te ayudare a superar tus desafíos, desarrollar tus habilidades y alcanzar tu máximo potencial",
-    price: "200",
+    price: "0",
     list: [
         {
-          itemOne: "Creatividad sostenible",
-          itemTwo: "Mente creativa, ambiente productivo",
-          itemThree: "Transforma tu entorno eleva tu productividad",
-          itemFour: "Conferencias motivacionales",
-          itemFive: "Gestion eficaz de tiempo",
-          itemSix: "Clima laboral",
+          itemOne: "Charlas motivacionales de desarrollo personal y bienestar emocional",
+          itemTwo: "Talleres Arte y Creatividad: Creatividad Sostenible, Mente creativa y ambiente productivo, Pintando emociones.",
+          itemThree: "Comunicacion asertiva",
         }
     ],
   },
@@ -56,23 +47,17 @@ const cardItem = [
 <article class="grid md:grid-cols-3 items-start justify-center gap-4 m-auto">
   {
     cardItem.map((link) =>  (
-      <div class="grid auto-rows-auto w-full max-w-sm p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8">
-        <h2 class="mb-4 text-xl font-medium text-gray-500 capitalize">
+      <div class="grid auto-rows-auto w-full max-w-sm p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8 h-full">
+        <h2 class="mb-2 text-xl font-medium text-gray-500 capitalize">
           {link.title}
         </h2>
-        <h3 class="mb-4 text-md font-light text-gray-400 text-pretty">
+        <h3 class="mb-2 text-md font-light text-gray-400 text-pretty">
           {link.description}
         </h3>
-        <!-- <div class="flex items-baseline text-gray-900">
-          <span class="text-3xl font-semibold">$</span>
-          <span class="text-5xl font-extrabold tracking-tight">
-            {link.price}
-          </span>
-          <span class="ms-1 text-xl font-normal text-gray-500">/month</span>
-        </div> -->
-        <hr class="mt-2 mb-12 border-2 border-gray-500 rounded" />
+       
+        <hr class="mb-4 border-2 border-gray-500 rounded" />
         <ul role="list" class="space-y-5 mb-7 mt-3">
-          {link.list.map(({ itemOne, itemTwo, itemThree, itemFour, itemFive, itemSix}) => (
+          {link.list.map(({ itemOne, itemTwo, itemThree }) => (
             <li class="flex items-center">
               <svg
                 class="flex-shrink-0 w-4 h-4 text-[var(--clr-two)]"
@@ -115,6 +100,7 @@ const cardItem = [
                 {itemThree}
             </span>
           </li>
+          /*
           <li class="flex">
             <svg
               class="flex-shrink-0 w-4 h-4 text-[var(--clr-two)]"
@@ -156,7 +142,7 @@ const cardItem = [
             <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
                 {itemSix}
             </span>
-          </li>
+          </li>*/
           ))}
         </ul>
         <Buttom href="/formBuy">Adquirir</Buttom>
