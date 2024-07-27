@@ -4,62 +4,67 @@ import Buttom from "./Buttom.astro";
 ---
 
 <div>
-  <section class="bg-white">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-90"
+  <section class="bg-transparent w-[80vw] lg:w-full my-20 m-auto">
+    <form
+        action="https://formsubmit.co/ximena.esther.troncoso@gmail.com"
+        class="space-y-4"
+        method="POST"
       >
-        Contact Us
-      </h2>
-      <p
-        class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl"
-      >
-        Got a technical issue? Want to send feedback about a beta feature? Need
-        details about our Business plan? Let us know.
-      </p>
-      <form action="#" class="space-y-8">
         <div>
           <label
             for="email"
-            class="block mb-2 text-sm font-medium text-gray-900"
-            >Your email</label
+            class="block mb-2 text-sm font-medium text-gray-900">Email</label
           >
           <input
             type="email"
-            id="email"
+            name="Email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-            placeholder="name@flowbite.com"
+            placeholder="nombre@mail.com"
             required
           />
         </div>
         <div>
           <label
             for="subject"
-            class="block mb-2 text-sm font-medium text-gray-900"
-            >Subject</label
+            class="block mb-2 text-sm font-medium text-gray-900">Asunto</label
           >
           <input
             type="text"
-            id="subject"
+            name="Asunto"
             class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-            placeholder="Let us know how we can help you"
+            placeholder="Permítenos saber en qué te podemos ayudar"
             required
           />
         </div>
         <div class="sm:col-span-2">
           <label
             for="message"
-            class="block mb-2 text-sm font-medium text-gray-900"
-            >Your message</label
+            class="block mb-2 text-sm font-medium text-gray-900">Mensaje</label
           >
           <textarea
             id="message"
             rows="6"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
-            placeholder="Leave a comment..."></textarea>
+            placeholder="Deja un comentario..."
+            name="Mensaje"></textarea>
         </div>
-        <Buttom>Send message</Buttom>
-      </form>
-    </div>
+        <button type="submit" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium bg-[var(--clr-one)] text-[var(--clr-three)] transition hover:scale-110 gap-2 ">Enviar mensaje</button>
+
+        <!-- Redireccion al Inicio -->
+        <input type="hidden" name="_next" value="https://ximenatroncoso.com/formBuy/">
+        <!-- Desactivar Captcha de FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Responder rápidamente a los envíos -->
+        <input type="hidden" name="_subject" value="Nuevo servicio solicitado">
+        <!-- Autorresponder -->
+        <input type="hidden" name="_autoresponse" value="your custom message">
+        <!-- Enviar una copia de cada mail -->
+        <input type="hidden" name="_cc" value="contacto@ximenatroncoso.com">
+
+        <!--contacto@ximenatroncoso.com
+        ximena.esther.troncoso@gmail.com-->
+      </form>    
   </section>
 </div>
+
+

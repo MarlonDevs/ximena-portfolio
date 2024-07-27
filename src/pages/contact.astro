@@ -14,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Contactame - Consultora Arte & Coaching">
   <main class="grid justify-center items-center h-full w-[80vw] my-12 mx-6 m-auto">
-    <section class="grid md:grid-cols-2 justify-between gap-28 w-full">
+    <section class="grid md:grid-cols-2 justify-between items-center gap-28 w-full">
       <!--Saludo y presentacion -->
       <article class="max-w-[25rem] text-[var(--clr-four)]">
         <header>
@@ -62,7 +62,67 @@ import Layout from "../layouts/Layout.astro";
       </article>
 
       <!--Form -->
-      <Form/>
+      <section class="bg-transparent w-full">
+        <form
+            action="https://formsubmit.co/ximena.esther.troncoso@gmail.com"
+            class="space-y-4"
+            method="POST"
+          >
+            <div>
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900">Email</label
+              >
+              <input
+                type="email"
+                name="Email"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                placeholder="nombre@mail.com"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="subject"
+                class="block mb-2 text-sm font-medium text-gray-900">Asunto</label
+              >
+              <input
+                type="text"
+                name="Asunto"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                placeholder="Permítenos saber en qué te podemos ayudar"
+                required
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900">Mensaje</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                placeholder="Deja un comentario..."
+                name="Mensaje"></textarea>
+            </div>
+            <button type="submit" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium bg-[var(--clr-one)] text-[var(--clr-three)] transition hover:scale-110 gap-2 ">Enviar mensaje</button>
+    
+            <!-- Redireccion al Inicio -->
+            <input type="hidden" name="_next" value="https://ximenatroncoso.com/formBuy/">
+            <!-- Desactivar Captcha de FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Responder rápidamente a los envíos -->
+            <input type="hidden" name="_subject" value="Nuevo servicio solicitado">
+            <!-- Autorresponder -->
+            <input type="hidden" name="_autoresponse" value="your custom message">
+            <!-- Enviar una copia de cada mail -->
+            <input type="hidden" name="_cc" value="contacto@ximenatroncoso.com">
+    
+            <!--contacto@ximenatroncoso.com
+            ximena.esther.troncoso@gmail.com-->
+          </form>    
+      </section>
     </section>
   </main>
 </Layout>

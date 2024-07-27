@@ -3,20 +3,18 @@ import Buttom from "./Buttom.astro";
 
 const cardItem = [
   {
-    title: "Servicio de Coaching Personalizado",
+    title: "Coaching Personalizado",
     description:
       "Orientado cumplir objetivos reconociendo limitantes, y descubriendo el poder de transformación de los pensamientos.",
     price: "0",
     list: [
         {
           itemOne: "Sesiones 1 a 1",
-          itemTwo: "Programa Mentoring de 10 sesiones",
+          itemTwo: "Programa mentoring 10 sesiones",
           itemThree: "Curso online 'Mujer Triunfadora'",
-          itemFour: "Atencion al cliente",
-          itemFive: "Gestion eficaz de tiempo",
-          itemSix: "Clima laboral",
         }
     ],
+    service: "seleccionarServicio('Servicio A')",
   },
   {
     title: "Sesiones grupales de Coaching",
@@ -25,14 +23,12 @@ const cardItem = [
     price: "0",
     list: [
         {
-          itemOne: "Clima Labora, Bienestar Emocional",
+          itemOne: "Clima labora, Bienestar emocional",
           itemTwo: "Desarrollo de equipos creativos",
           itemThree: "Liderazgo desde el ser creativo",
-          itemFour: "Atencion al cliente",
-          itemFive: "Gestion eficaz de tiempo",
-          itemSix: "Clima laboral",
         }
     ],
+    service: "seleccionarServicio('Servicio B')",
   },
   {
     title: "Talleres y conferencias arte, creatividad e innovación.",
@@ -45,6 +41,7 @@ const cardItem = [
           itemThree: "Curso online y presencial 'Emocion-Arte'",
         }
     ],
+    service: "seleccionarServicio('Servicio C')",
   },
 ];
 
@@ -53,15 +50,17 @@ const cardItem = [
 <article class="grid md:grid-cols-3 items-start justify-center gap-4 m-auto">
   {
     cardItem.map((link) =>  (
-      <div class="grid auto-rows-auto w-full max-w-sm p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8 h-full">
-        <h2 class="mb-2 text-xl font-medium text-gray-500 capitalize">
-          {link.title}
-        </h2>
-        <h3 class="mb-2 text-md font-light text-gray-400 text-pretty">
-          {link.description}
-        </h3>
-       
+      <div class="grid auto-rows-auto w-full max-w-sm min-h-fit p-4 bg-white border-2 border-gray-500 rounded-lg shadow sm:p-8 h-full items-start justify-center">
+        <div>
+          <h2 class="mb-4 text-xl font-medium text-gray-500 capitalize">
+            {link.title}
+          </h2>
+          <h3 class="mb-2 text-md font-light text-gray-400 text-pretty">
+            {link.description}
+          </h3>
+        </div>
         <hr class="mb-4 border-2 border-gray-500 rounded" />
+        <div class="grid gap-2 grip-rows-2">
         <ul role="list" class="space-y-5 mb-7 mt-3">
           {link.list.map(({ itemOne, itemTwo, itemThree }) => (
             <li class="flex items-center">
@@ -74,7 +73,7 @@ const cardItem = [
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+              <span class="text-sm font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
                 {itemOne}
               </span>
             </li>
@@ -88,7 +87,7 @@ const cardItem = [
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
-            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+            <span class="text-sm font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
                 {itemTwo}
             </span>
           </li>
@@ -102,7 +101,7 @@ const cardItem = [
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
             </svg>
-            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
+            <span class="text-sm font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">
                 {itemThree}
             </span>
           </li>
@@ -152,6 +151,7 @@ const cardItem = [
           ))}
         </ul>
         <Buttom href="/formBuy">Adquirir</Buttom>
+      </div>
       </div>
     ))
   }
